@@ -1,15 +1,25 @@
 <header class="site-header">
 
-  <div class="wrap">
+  <div class="logo">
+    <a href="{{ site.baseurl }}/"><img src="/img/logo.png" alt=""></a>
+  </div>
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+  <!-- <nav class="site-nav">
+    {% for page in site.pages %}
+      {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+    {% endfor %}
+  </nav> -->
+  
+  <h2>Short, in-depth explanations of JavaScript code and concepts.</h2>
 
-    <nav class="site-nav">
-      {% for page in site.pages %}
-        {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-      {% endfor %}
-    </nav>
+  <div class="centered">
+    <a href="/about" class="button"><i class="fa fa-info-circle"></i> About this site</a>
+  </div>
 
+  <div class="header-sticky-bottom">
+    <hr class="fancy">
+    <a class="button" href="https://twitter.com/intent/user?screen_name=benhowdle"><i class="fa fa-twitter"></i> Ben Howdle</a>
+    <a class="button" href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> RSS</a>
   </div>
 
 </header>

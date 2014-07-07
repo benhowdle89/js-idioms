@@ -1,0 +1,22 @@
+.centered {
+	text-align: center;
+}
+
+.aligned-right {
+	text-align: right;
+}
+
+.breathe-top {
+	margin-top: 12px;
+}
+
+.clear {
+	clear: both;
+}
+
+hr.fancy {
+	height: 1px;
+	display: block;
+	margin: 24px 0;
+	background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, bg-opacity($accent, 0.5)));
+}

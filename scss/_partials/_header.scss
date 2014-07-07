@@ -1,0 +1,36 @@
+.site-header {
+	float: left;
+	width: 25%;
+	position: fixed;
+	height: 100%;
+	padding: 24px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-image: linear-gradient(to top, $accent, #fff) 1 100%;
+	> h2 {
+		text-align: center;
+	}
+}
+
+.header-sticky-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 12px;
+	width: 100%;
+	color: #444;
+	> .button {
+		margin-right: 6px;
+	}
+}
+
+.logo {
+	margin-bottom: 12px;
+	text-align: center;
+	a {
+		display: inline-block;
+		img {
+			max-width: 168px;
+		}
+	}
+}

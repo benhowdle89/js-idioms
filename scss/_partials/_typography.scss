@@ -1,0 +1,45 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 300;
+   	-webkit-font-smoothing: antialiased;
+   	line-height: 1.5;
+   	color: #444;
+}
+
+p {
+	line-height: 1.625;
+}
+
+a {
+	color: inherit;
+	transition: .2s;
+}
+
+strong {
+	font-weight: 500;
+}
+
+em {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 32px;
+	margin-bottom: 6px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 24px;
+}
+
+h3 {
+	font-size: 18px;
+	margin-bottom: 12px;
+}
+
+.muted {
+	font-size: 14px;
+	color: #444;
+}
