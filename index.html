@@ -11,7 +11,7 @@ layout: default
       <li>
         <!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <p>{{ post.content | truncatewords: 75 }}</p>
+        <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
         <a class="button breathe-top" href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-chevron-circle-right"></i> Read more</a>
         <hr class="fancy" />
       </li>

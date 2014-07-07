@@ -4,9 +4,12 @@
 	position: fixed;
 	height: 100%;
 	padding: 24px;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-image: linear-gradient(to top, $accent, #fff) 1 100%;
+	@include media(phone){
+		width: 100%;
+		float: none;
+		position: relative;
+		height: auto;
+	}
 	> h2 {
 		text-align: center;
 	}
@@ -16,9 +19,12 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	padding: 12px;
+	padding: 24px;
 	width: 100%;
 	color: #444;
+	@include media(phone){
+		display: none;
+	}
 	> .button {
 		margin-right: 6px;
 	}
@@ -31,6 +37,9 @@
 		display: inline-block;
 		img {
 			max-width: 168px;
+			@include media(phone){
+				max-width: 64px;
+			}
 		}
 	}
 }

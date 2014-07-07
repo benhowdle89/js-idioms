@@ -6,3 +6,15 @@
     background: $color;
     background: bg-opacity($color, $opacity);
 }
+
+@mixin media($_name) {
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $expression: nth($breakpoint, 2);
+    @if $_name == $name and $expression {
+      @media only screen and #{$expression} {
+        @content;
+      }
+    }
+  }
+}

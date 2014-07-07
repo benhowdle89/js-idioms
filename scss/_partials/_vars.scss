@@ -2,3 +2,14 @@
 
 $accent: #BE05C6;
 $secondary: #FF18B0;
+
+
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+$retina: 'screen and (-webkit-min-device-pixel-ratio: 2)';
+
+$breakpoints: (
+	'phone': '(max-width: 480px)',
+	'tablet': '(max-width: 1024px)'
+)!default;
+
+$breakpoint-has-widths: ('phone', 'tablet')!default;

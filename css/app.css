@@ -18,7 +18,7 @@ ul {
 ul.bulleted {
   list-style-type: disc; }
 
-.highlight {
+.highlight, code:not([class]) {
   background-color: #efefef;
   padding: 7px 7px 7px 10px;
   border: 1px solid #ddd;
@@ -26,7 +26,8 @@ ul.bulleted {
   -webkit-box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
   margin: 20px 0 20px 0;
-  overflow: hidden; }
+  overflow: hidden;
+  overflow-x: scroll; }
 
 code {
   font-family: 'Bitstream Vera Sans Mono','Courier', monospace; }
@@ -327,7 +328,7 @@ em {
 
 h1 {
   font-size: 32px;
-  margin-bottom: 6px;
+  margin-bottom: 24px;
   font-weight: 500; }
 
 h2 {
@@ -335,8 +336,9 @@ h2 {
   margin-bottom: 24px; }
 
 h3 {
-  font-size: 18px;
-  margin-bottom: 12px; }
+  font-size: 22px;
+  margin-bottom: 6px;
+  font-weight: 500; }
 
 .muted {
   font-size: 14px;
@@ -347,10 +349,13 @@ h3 {
   width: 25%;
   position: fixed;
   height: 100%;
-  padding: 24px;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-image: linear-gradient(to top, #be05c6, white) 1 100%; }
+  padding: 24px; }
+  @media only screen and (max-width: 480px) {
+    .site-header {
+      width: 100%;
+      float: none;
+      position: relative;
+      height: auto; } }
   .site-header > h2 {
     text-align: center; }
 
@@ -358,9 +363,12 @@ h3 {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 12px;
+  padding: 24px;
   width: 100%;
   color: #444; }
+  @media only screen and (max-width: 480px) {
+    .header-sticky-bottom {
+      display: none; } }
   .header-sticky-bottom > .button {
     margin-right: 6px; }
 
@@ -371,13 +379,21 @@ h3 {
     display: inline-block; }
     .logo a img {
       max-width: 168px; }
+      @media only screen and (max-width: 480px) {
+        .logo a img {
+          max-width: 64px; } }
 
 .page-content {
   float: left;
   width: 75%;
-  padding: 24px;
+  padding: 24px 24px 48px 24px;
   max-width: 960px;
   margin-left: 25%; }
+  @media only screen and (max-width: 480px) {
+    .page-content {
+      width: 100%;
+      float: none;
+      margin-left: 0; } }
 
 .posts li {
   margin-bottom: 12px; }
@@ -386,7 +402,7 @@ h3 {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     margin-bottom: 12px; }
 
@@ -408,6 +424,11 @@ h3 {
 
 .post-content {
   margin-top: 24px; }
+  .post-content > p {
+    margin-bottom: 12px; }
+
+.meta {
+  margin-top: -18px; }
 
 .centered {
   text-align: center; }
@@ -426,3 +447,6 @@ hr.fancy {
   display: block;
   margin: 24px 0;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, rgba(190, 5, 198, 0.5))); }
+
+.about-points li {
+  margin-bottom: 24px; }

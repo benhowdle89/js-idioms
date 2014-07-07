@@ -4,4 +4,11 @@
 
 .post-content {
 	margin-top: 24px;
+	> p {
+		margin-bottom: 12px;
+	}
+}
+
+.meta {
+	margin-top: -18px;
 }

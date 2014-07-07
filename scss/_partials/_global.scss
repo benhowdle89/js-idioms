@@ -1,7 +1,12 @@
 .page-content {
 	float: left;
 	width: 75%;
-	padding: 24px;
+	padding: 24px 24px 48px 24px;
 	max-width: 960px;
 	margin-left: 25%;
+	@include media(phone){
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
 }
