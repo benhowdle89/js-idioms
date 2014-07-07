@@ -1,10 +1,7 @@
 # Site settings
-title: JS Idioms
-description: "JS Idioms - the lesser known and less obvious parts of JavaScript"
+title: JS for all of us
+description: "Short, in-depth explanations of JavaScript code and concepts"
 baseurl: ""
-url: "http://benhowdle.im/js-idioms"
-twitter_username: benhowdle
-github_username:  benhowdle89
 
 # Build settings
 markdown: kramdown
