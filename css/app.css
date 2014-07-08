@@ -334,6 +334,9 @@ h1 {
 h2 {
   font-size: 24px;
   margin-bottom: 24px; }
+  @media only screen and (max-width: 1024px) {
+    h2 {
+      font-size: 18px; } }
 
 h3 {
   font-size: 22px;
@@ -371,6 +374,9 @@ h3 {
       display: none; } }
   .header-sticky-bottom > .button {
     margin-right: 6px; }
+    @media only screen and (max-width: 1024px) {
+      .header-sticky-bottom > .button {
+        margin-bottom: 6px; } }
 
 .logo {
   margin-bottom: 12px;
@@ -382,6 +388,9 @@ h3 {
       @media only screen and (max-width: 480px) {
         .logo a img {
           max-width: 64px; } }
+      @media only screen and (max-width: 1024px) {
+        .logo a img {
+          max-width: 96px; } }
 
 .page-content {
   float: left;
