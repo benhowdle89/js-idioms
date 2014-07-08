@@ -29,6 +29,9 @@ ul.bulleted {
   overflow: hidden;
   overflow-x: scroll; }
 
+code:not([class]) {
+  padding: 1px 4px 0 5px; }
+
 code {
   font-family: 'Bitstream Vera Sans Mono','Courier', monospace; }
 
