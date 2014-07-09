@@ -7,6 +7,8 @@
 	font-weight: 300;
 	color: $accent;
 	transition: .2s;
+	background: #fff;
+	cursor: pointer;
 	&:hover {
 		background: bg-opacity($accent, 0.7);
 		color: #fff;

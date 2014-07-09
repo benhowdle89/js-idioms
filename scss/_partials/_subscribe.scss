@@ -1,0 +1,28 @@
+.subscribe {
+	background: #f7f7f7;
+	padding: 12px;
+	input[type="email"]{
+		border: 1px solid #ccc;
+		padding: 6px;
+		transition: .2s;
+		width: 300px;
+		&:focus {
+			outline: none;
+			border: 1px solid #666;
+		}
+	}
+	.button {
+		&:focus {
+			outline: none;
+		}
+	}
+	.response#mce-error-response {
+		color: red;
+		font-weight: 500;
+		margin-top: 6px;
+	}
+	.response#mce-success-response {
+		font-weight: 500;
+		padding-top: 6px;
+	}
+}
