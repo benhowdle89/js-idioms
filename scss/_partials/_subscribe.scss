@@ -6,9 +6,16 @@
 		padding: 6px;
 		transition: .2s;
 		width: 300px;
+		-webkit-appearance: none;
 		&:focus {
 			outline: none;
 			border: 1px solid #666;
+		}
+		@include media(phone){
+			width: 100%;
+		}
+		@include media(tablet){
+			width: 100%;			
 		}
 	}
 	.button {
