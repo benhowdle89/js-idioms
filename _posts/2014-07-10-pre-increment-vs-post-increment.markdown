@@ -10,12 +10,12 @@ The concept in question is pre-increment (++i) vs. post-increment (i++). It cert
 
 {% highlight javascript %}
 var i = 0;
-var j = ++i;
-console.log(j == 1); // true
+++i;
+console.log(i == 1); // true
 
 var i = 0;
-var j = i++;
-console.log(j == 1); // true
+i++;
+console.log(i == 1); // true
 {% endhighlight %}
 
 So they both will increment a value, but they key difference is at what point that increment applied.
