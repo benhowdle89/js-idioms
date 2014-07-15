@@ -6,3 +6,4 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 permalink: pretty
+future: false
