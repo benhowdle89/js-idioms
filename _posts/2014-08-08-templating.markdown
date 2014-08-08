@@ -88,34 +88,25 @@ In terminal, within your new project directory, create an `index.html`, a `main.
 
 {% highlight javascript %}
 var gulp = require('gulp');
-var source = require('vinyl-source-stream');
-var watchify = require('watchify');
+var browserify = require('gulp-browserify');
 
 var hbsfy = require("hbsfy").configure({
 	extensions: ["html"]
 });
 
 gulp.task('scripts', function() {
-	var bundler = watchify('./main.js');
- 
-	bundler.transform(hbsfy);
-
-	bundler.on('update', rebundle);
-
-	function rebundle() {
-		return bundler.bundle()
-			.pipe(source('built.js'))
-			.pipe(gulp.dest('./'));
-	}
-
-	return rebundle();
+	gulp.src('main.js')
+		.pipe(browserify({
+			transform: [hbsfy]
+		}))
+		.pipe(gulp.dest('./built/'));
 });
 
 // default gulp task
 gulp.task('default', ['scripts']);
 {% endhighlight %}
 
-Once you've done that, type into terminal `npm install gulp -g`, when that's finished, type in `npm install watchify hbsfy vinyl-source-stream`. This will tell npm (Node.js' own package manager) to install gulp on your system and the rest into your project directory. We'll come back to that gulp file in a second. 
+Once you've done that, type into terminal `npm install gulp -g`, when that's finished, type in `npm install gulp handlebars hbsfy jquery`. This will tell npm (Node.js' own package manager) to install gulp on your system and the rest into your project directory. We'll come back to that gulp file in a second. 
 
 Next I'd like you to create a sub-directory called `templates` and create a file inside called `sample.html`. Fill it with this content:
 
@@ -130,7 +121,7 @@ and into the `index.html` file, place the content below:
 	<div id="page">
 
 	</div>
-	<script type="text/javascript" src="built.js"></script>
+	<script type="text/javascript" src="built/main.js"></script>
 </body>
 </html>
 
@@ -141,6 +132,7 @@ Now, in your `main.js` place this content:
 {% highlight javascript %}
 
 var template = require('./templates/sample.html');
+var $ = require('jquery');
 
 $('#page').html(template());
 
@@ -148,6 +140,6 @@ $('#page').html(template());
 
 and then open up terminal and type in `gulp`. Now all being well, you should be able to visit the `index.html` page in a web browser and see the contents of your `sample.html` file on the page.
 
-Now, to run through everything we've just done. First off, we used [Gulp](http://gulpjs.com/), which as I mentioned, we won't delve too much into now, but it's a build system. You tell it tasks to perform, and it performs them. We defined a `scripts` task in our `gulpfile.js` above and told Gulp to run that task, whenever we run `gulp` from the command line. It's the default task. We are using Browserify's best friend "Watchify" - written by the same very smart guy. Watchify uses Browserify under the hood, but it also watches your files for changes so you don't keep having to re-run Browserify whenever you want to see your changes update in the browser. So we tell Browserify where to find our "main" JavaScript file, which happens to also be called `main.js` and then we tell it to "transform" our file as it's being processed. In our case, as we're using Handlebars, what this will do is scan our `main.js` and find the `require` function which points to a `.html` file (our template!) and says, "when you find one of these, please pre-compile it with Handlebars". Then Browserify continues as normal and outputs a new file: `built.js`. This new file will contain all the HTML content from our `.html` template, ready for when we run this line: `$('#page').html(template());`. 
+Now, to run through everything we've just done. First off, we used [Gulp](http://gulpjs.com/), which as I mentioned, we won't delve too much into now, but it's a build system. You tell it tasks to perform, and it performs them. We defined a `scripts` task in our `gulpfile.js` above and told Gulp to run that task, whenever we run `gulp` from the command line. It's the default task. We tell Browserify where to find our "main" JavaScript file, which happens to also be called `main.js` and then we tell it to "transform" our file as it's being processed. In our case, as we're using Handlebars, what this will do is scan our `main.js` and find the `require` function which points to a `.html` file (our template!) and says, "when you find one of these, please pre-compile it with Handlebars". Then Browserify continues as normal and outputs a new file: `built.js`. This new file will contain all the HTML content from our `.html` template, ready for when we run this line: `$('#page').html(template());`. 
 
 So by now, you're armed with a basic understanding of how templating works, and it's advantages. You know how to use Handlebars, and you can now develop using separate `.html` files, and build your templates into your JavaScript file using Browserify and Gulp. Not bad.
