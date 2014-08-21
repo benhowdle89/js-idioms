@@ -43,7 +43,7 @@ For today's post, I'm going to be using the [Handlebars](http://handlebarsjs.com
 Lets start by illustrating how Handlebars works (which is similar to the rest), then we'll build up to a more realistic development workflow using Handlebars.
 
 {% highlight javascript %}
-<script id="results-template" type="text/x-handlebars-template"></script>
+<script id="results-template" type="text/x-handlebars-template">
 {% raw %}{{#each results}}
 	<li class="search-result">{{item}}</li>
 {{/each}}{% endraw %}
