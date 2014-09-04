@@ -17,13 +17,13 @@ If you want to look over the whole source, to keep some context as we go through
 The first thing to note is actually the first line:
 
 {% highlight javascript %}
-`document.addEventListener("DOMContentLoaded", function() {`
+document.addEventListener("DOMContentLoaded", function() {
 {% endhighlight %}
 
 Some of you more familiar with jQuery might be used to this line:
 
 {% highlight javascript %}
-`$(document).ready(function(){  // put your code })`
+$(document).ready(function(){  // put your code })
 {% endhighlight %}
 
 The purpose of both of these lines is to ascertain when the document itself has been loaded and parsed. This doesn't mean images and stylesheets have necessarily finished loading (you can listen for a `load` event to see when the page has fully loaded).
@@ -59,7 +59,7 @@ However, in native JavaScript, the DOM API isn't quite so forthcoming. We have t
 A bit of a mouthful, but hopefully this line from uilang will clear it up:
 
 {% highlight javascript %}
-`codeBlock.parentNode.removeChild(codeBlock)`
+codeBlock.parentNode.removeChild(codeBlock)
 {% endhighlight %}
 
 We want to remove `codeBlock`, so we have to traverse the DOM upwards to get it's parent, and then call `removeChild` on the parent, passing in the child element `codeBlock` which removes it from the page.
