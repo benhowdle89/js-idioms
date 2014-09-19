@@ -1,0 +1,123 @@
+---
+layout: post
+title:  "Hoisting"
+date:   2014-09-19 18:25:31
+---
+
+tl;dr - hoisting is when the JavaScript engine pulls variables and functions to the top of their immediate scope at runtime.
+
+*wut*
+
+Let's explore what this really means...
+
+## Functions
+
+Now you've got a (very) brief idea of what "hoisting" is, we can look at how it differs across variables and functions.
+
+Let's declare ourself a bog standard function:
+
+{% highlight javascript %}
+function getTweets(){
+	console.log('got tweets');
+}
+getTweets(); //got tweets
+{% endhighlight %}
+
+This'll hopefully look fairly familiar to you, declare a function first, then call it. However, we can also do this:
+
+{% highlight javascript %}
+getTweets(); //got tweets
+function getTweets(){
+	console.log('got tweets');
+}
+{% endhighlight %}
+
+This actually also works, because the JavaScript engine will re-write this piece of code (internally, you won't see it) just like the first example. The function and function body are both "hoisted" to the top of the immediate scope.
+
+For those unfamiliar with the concept of "scope" in JavaScript: Scope is an internal directory of all the variables and functions you are writing in your code.
+
+{% highlight javascript %}
+var a, b, c;
+var foo = function(){};
+{% endhighlight %}
+
+Everything in the above block of code is in the same scope. However, the only way to create a new scope in JavaScript is to create a function. Everything inside that new function has it's own scope (or directory). Whenever you reference a function or a variable, the engine will look inside the closest scope directory. If the engine cannot find it in that scope, it looks in the outer scope (the scope that the surrounding function was defined in), if it still can't find it, it keeps looking until it hits the `window` object. Which, if not found there, is when you get an `undefined` error.
+
+{% highlight javascript %}
+var tweet = "So, Apple huh?";
+function inner(){
+	var tweet = "So, Samsung huh?";
+	console.log(tweet);
+}
+inner();
+console.log(tweet);
+{% endhighlight %}
+
+The above code results in:
+
+	"So, Samsung huh?"
+	"So, Apple huh?"
+
+<br />
+When the `console.log` ran, it found the `tweet` variable defined in it's own scope, so it didn't need to look to the outer scope at all.
+
+Back to hoisting...
+
+One common question amongst JavaScript beginners is "should I use function foo(){} or var foo = function(){}?". One difference between the two is how they're hoisted.
+
+The simple answer is that the function expression (`var foo = function(){}`) isn't hoisted at all, whereas the function declaration is.
+
+{% highlight javascript %}
+foo(); // runs fine
+bar(); // undefined error
+function foo(){
+	
+}
+var bar = function(){
+	
+}
+{% endhighlight %}
+
+## Variables
+
+Almost entirely the same concept as function hoisting, however, unlike function hoisting, when a variable is hoisted, only the declaration is hoisted, not the assignment. Let's have a look at an example:
+
+{% highlight javascript %}
+var foo = 1;
+function bar() {
+	if (!foo) {
+		var foo = 10;
+	}
+	console.log(foo);
+}
+bar();
+{% endhighlight %}
+
+This will log "10" to the console. Say whaaat?
+
+The code is actually re-written (internally remember) like so:
+
+{% highlight javascript %}
+var foo = 1;
+function bar() {
+	var foo;
+	if (!foo) {
+		foo = 10;
+	}
+	console.log(foo);
+}
+bar();
+{% endhighlight %}
+
+So you can see that because the variable declaration was hoisted to the top of it's scope (the `bar` function), it then gets evaluated as a JavaScript "falsey", and is re-assigned to "10".
+
+## Notes
+
+Hoisting is quite tricky because
+
+1. It involves scope, which is quite a bemusing concept to get your head around,
+2. It all happens behind the scenes, so it can lead to some quite extensive and painful debugging if you miss it.
+
+Hoisting problems can almost completely be avoided by declaring all of your variables at the top of the function you're currently defining.
+
+Also, if you're still wondering should you be using function declarations or function expressions (`function foo(){} or var foo = function(){}`), the simple answer is that there is no answer. Function declarations allow you define the function anywhere in the scope and hoisting will pull the function up to the top, which has it's pros and cons. It allows flexibility in your coding, however it doesn't enforce any strict structure. With function expressions, you'll have to think a lot more about where and when you're defining the function.
