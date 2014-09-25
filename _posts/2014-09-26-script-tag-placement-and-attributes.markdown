@@ -78,3 +78,7 @@ The HTML5 way of defining script tags allows you to omit the `type` attribute, s
 {% highlight html %}
 <script src="foo.js"></script>
 {% endhighlight %}
+
+### In closing
+
+In light of the browser compatibility woes and unreliable `defer` usage, I'd advocate that you making it a general practice to always put your script tags right at the bottom of the page, just before the closing `</body>`.
