@@ -89,14 +89,14 @@ showUsers: function(){
 }
 {% endhighlight %}
 
-As you can see, we don't call `fetch` at all in our Router, but we just instantiate and pass it into our new View.
+As you can see, we don't call `fetch` at all in our Router, but we just instantiate the collection and pass it into our new View.
 
-Switching over to the implementation of what our `usersView` might look like:
+Switching over to the implementation of what our Views may look like:
 
 {% highlight javascript %}
 var usersView = Backbone.View.extend({
   initialize: function(){
-    this.listenTo(this.collection, "add", this.renderUser, this);
+    this.listenTo(this.collection, "add", this.renderUser);
   },
 
   renderUser: function(user){
@@ -128,9 +128,9 @@ We've now rendered out skeletal HTML straight to the DOM. This might be somethin
 <div id="ourUsersContainer"></div>
 {% endhighlight %}
 
-Just enough for the user to realise what's going on and exactly what they'll be looking at.
+Just enough for the user to realise what's going on and exactly what they'll expect to be looking at.
 
-We then listen out for an "add" event on our users collection. This event is triggered by Backbone.js everytime a new Model is added to the relevant collection (which will happen multiple times as our AJAX request completes). When this event occurs we can then run our `renderUser` function which accepts a User Model. This function will append the contents of a new `userView` each time it's called. This is a common pattern in Backbone.js, even though it might feel like a lot for something so simple, we're now building up a nice set of re-usable components for our UI. 
+We then listen out for an "add" event on our users collection. This event is triggered by Backbone.js every time a new Model is added to the relevant collection (which will happen multiple times as our AJAX request completes). When this event occurs we can then run our `renderUser` function which accepts a User Model. This function will append the contents of a new `userView` each time it's called. This is a common pattern in Backbone.js, even though it might feel like a lot of code/typing for something so simple, we're now building up a nice set of re-usable components for our UI. 
 
 **Pros of doing it this way:**
 
