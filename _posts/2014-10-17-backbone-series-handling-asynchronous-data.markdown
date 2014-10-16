@@ -16,7 +16,7 @@ Most of JavaScript is synchronous, which has it's major plus points; one being t
 
 *Then this one.*
 
-The real joy comes when one of your *things* is asynchronous (ie. an AJAX request, or a `setTimeout`). How do you make sure you have all you need for when the *next thing happens*?
+The real joy (edit: no joy) comes when one of your *things* is asynchronous (ie. an AJAX request, or a `setTimeout`). How do you make sure you have all you need for when the *next thing happens*?
 
 In real terms, the *next thing* that needs to happen could be outputting a list of users to the DOM. How are we getting our list of users? From the server. Ok, so we need our AJAX request to happen and *then*, we can output our list of users.
 
