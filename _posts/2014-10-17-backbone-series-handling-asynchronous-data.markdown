@@ -4,7 +4,7 @@ title:  "Backbone series: Handling asynchronous data"
 date:   2014-10-17 18:25:31
 ---
 
-This is going to be the first in a series of [Backbone.js](http://backbonejs.org) posts. There won't be any particular order, ie. beginner -> advanced, but more a collection of some of the patterns I've encountered and concepts we can learn from. It would help if you're at least slightly familiar with Backbone.js, but you'll hopefully still be able to pick the odd thing up even if you're not.
+This is going to be the first in a series of [Backbone.js](http://backbonejs.org) posts. They won't be in any particular order, ie. beginner -> advanced, but more a collection of some of the patterns I've encountered and concepts we can learn from. It would help if you're at least slightly familiar with Backbone.js, but you'll hopefully still be able to pick the odd thing up even if you're not.
 
 ## Async data
 
