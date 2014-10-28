@@ -97,6 +97,7 @@ Switching over to the implementation of what our Views may look like:
 var usersView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.collection, "add", this.renderUser);
+    this.collection.fetch();
   },
 
   renderUser: function(user){
