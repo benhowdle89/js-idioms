@@ -111,7 +111,7 @@ function getPaginatedItems(items, page) {
 
 So now, all we need to do is to pass in our array of data and a page number, and we'll receive in return a fully populate pagination object.
 
-Lo-Dash played a key part in this as it provided the `_.rest()` method, which allows you to provide an array and an offset. Which basically means it will chop off or skip the `offset` number of items from the array and only return the rest of the items. We can then use the standard JavaScript `slice()` array method to limit the results returned to our pre-configured number of items to return.
+Lo-Dash played a key part in this as it provided the `_.rest()` method, which allows you to provide an array and an offset. Which basically means it will chop off or skip the `offset` number of items from the front of the array and only return the rest of the items. We can then use the standard JavaScript `slice()` array method to limit the results returned to our pre-configured number of items to return.
 
 ## Notes
 
