@@ -12,7 +12,7 @@ All the data that the API sent to the user was stored in a JSON file, not a data
 
 If you've not met [Lo-Dash](https://lodash.com) before, it's "A utility library delivering consistency, customization, performance, & extras". It's marketed as a more performant [Underscore.js](http://underscorejs.org), so if you're used to using that, maybe give Lo-Dash a try.
 
-So I had an array, like so:
+So I had an array which I needed to paginate, like so:
 
 {% highlight javascript %}
 [
