@@ -96,9 +96,9 @@ I then needed to accept a `page` parameter (ie. the range of data the developer 
 {% highlight javascript %}
 function getPaginatedItems(items, page) {
 	var page = page || 1,
-		per_page = 3,
-		offset = (page - 1) * per_page,
-		paginatedItems = _.rest(items, offset).slice(0, per_page);
+	    per_page = 3,
+	    offset = (page - 1) * per_page,
+	    paginatedItems = _.rest(items, offset).slice(0, per_page);
 	return {
 		page: page,
 		per_page: per_page,
