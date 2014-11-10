@@ -1,7 +1,7 @@
 # Site settings
 title: JS for all of us
 description: "Short, in-depth explanations of JavaScript code and concepts"
-baseurl: ""
+baseurl: "http://jsforallof.us"
 
 # Build settings
 markdown: kramdown
