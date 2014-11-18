@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using recursion to generate a unique ID"
+title:  "Using recursion and closures to generate a unique ID"
 date:   2014-11-05 18:25:31
 ---
 
