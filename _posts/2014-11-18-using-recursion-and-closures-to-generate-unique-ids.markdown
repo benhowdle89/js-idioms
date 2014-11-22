@@ -4,6 +4,8 @@ title:  "Using recursion and closures to generate unique IDs"
 date:   2014-11-05 18:25:31
 ---
 
+Disclaimer: the code outlined in this post is not production-level code, there are certainly better ways to achieve the desired behaviour. Sometimes it just helps to go through a tangible use-case when trying to understand a concept.
+
 Recursion: doing something over and over until a certain condition is satisfied.
 
 Cool in theory, but it'll become a lot more interesting (and useful) when you see it in action.
