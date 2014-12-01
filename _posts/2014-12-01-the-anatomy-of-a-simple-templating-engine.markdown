@@ -33,7 +33,7 @@ And to be able to dynamically generate HTML from this template, but with the `{%
 
 When creating functionality in development, I always like to start with the desired usage and work backwards. That way, you know exactly what you're trying to achieve as you're writing your implementation code.
 
-We want to to be to do the following:
+We want to be to do the following:
 
 {% highlight javascript %}
 {% raw %}
