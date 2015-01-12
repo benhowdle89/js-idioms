@@ -448,6 +448,20 @@ h3 {
 .mailchimp, .comments {
   margin: 48px 0; }
 
+.promos {
+  height: 300px;
+  background: url(/img/host.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  padding: 24px; }
+  .promos h2 {
+    margin-bottom: 6px; }
+  .promos .button {
+    border: none;
+    position: absolute;
+    bottom: 24px; }
+
 .centered {
   text-align: center; }
 
