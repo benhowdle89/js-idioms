@@ -18,7 +18,7 @@ As it can run on a server, it can also run on our development machines, just lik
 
 I thought these concepts would be better visualised by a screencast, but don't worry, if you're not a fan of screencasts, the same content continues below the video embed.
 
-<iframe src="//player.vimeo.com/video/119454456" width="900" height="505.8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/119454456">Front-end development workflow with Node.js and npm</a> from <a href="http://vimeo.com/user37350058">Ben Howdle</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe class="hide-on-mobile" src="//player.vimeo.com/video/119454456" width="900" height="505.8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p class="muted"><a href="http://vimeo.com/119454456">Front-end development workflow with Node.js and npm</a> from <a href="http://vimeo.com/user37350058">Ben Howdle</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ### Node.js & npm
 
