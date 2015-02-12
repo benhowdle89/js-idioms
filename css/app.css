@@ -412,7 +412,9 @@ blockquote {
       margin-left: 0; } }
 
 .posts li {
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  list-style-type: none;
+  margin-left: 0; }
   .posts li .post-link {
     display: block;
     width: 100%;
@@ -466,6 +468,10 @@ blockquote {
     position: absolute;
     bottom: 24px; }
 
+ul li {
+  list-style-type: disc;
+  margin-left: 20px; }
+
 .centered {
   text-align: center; }
 
@@ -488,6 +494,8 @@ hr.fancy {
   background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, rgba(190, 5, 198, 0.5))); }
 
 .about-points li {
+  list-style-type: none;
+  margin-left: 0;
   margin-bottom: 24px; }
 
 .subscribe {

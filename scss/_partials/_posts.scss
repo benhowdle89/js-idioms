@@ -1,6 +1,8 @@
 .posts {
 	li {
 		margin-bottom: 12px;
+		list-style-type: none;
+		margin-left: 0;
 		.post-link {
 			display: block;
 			width: 100%;
