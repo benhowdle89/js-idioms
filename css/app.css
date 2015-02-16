@@ -18,6 +18,9 @@ ul {
 ul.bulleted {
   list-style-type: disc; }
 
+img {
+  max-width: 100%; }
+
 .highlight, code:not([class]) {
   background-color: #efefef;
   padding: 7px 7px 7px 10px;
