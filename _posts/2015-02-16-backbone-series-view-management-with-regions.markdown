@@ -29,7 +29,7 @@ Enter regions. Regions are the result of you visually splitting up your UI into 
 
 Let's take a blog to illustrate what we mean by regions.
 
-![](http://cl.ly/ZnNc/blog%20layout.png)
+![](/img/blog_layout.png)
 
 We can now visually represent our application in regions. 
 
