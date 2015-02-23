@@ -38,7 +38,7 @@ You may ask, "why React.js?", as we're using Backbone.js (which has a View layer
 
 ### Walkthrough
 
-Like I said, this post will be more of a brief overview of what an isomorphic JavaScript *might* look like.
+Like I said, this post will be more of a brief overview of what isomorphic JavaScript *might* look like.
 
 The source: [https://github.com/benhowdle89/isomorphic-js-app](https://github.com/benhowdle89/isomorphic-js-app). Feel free to skip ahead and look through the codebase at your own pace.
 
@@ -250,9 +250,7 @@ module.exports = Backbone.Collection.extend({
 
 This was my first experiment with React.js, so I was very much learning by doing, but it was certainly eye-opening to see how, with a small bit of glue logic, we could set ourselves up with a framework that allows us to write environment-agnostic code.
 
-Myself, along with others I'm sure, find certain tutorials and blog posts fairly contrived in the examples they showcase. [TodoMVC](http://todomvc.com/) is a delightful resource, and taking nothing away from work that's gone into it, it does exactly what it set out to do; giving you a sampling of each framework and library by building one, very simple application.
-
-By including the Users and Products resources (you can further check out the [Node.js setup](https://github.com/benhowdle89/isomorphic-js-app/blob/master/api/index.js) I usually employ when dealing with API-side data), I hope I've given you a glimpse at how I'd approach a real application. I can say with confidence that other applications I've built will, and have, scaled well, however, as this was a new and experimental architecture for me, I can't promise the sample application I built takes into account all scenarios and situations.
+Myself, along with others I'm sure, find certain tutorials and blog posts fairly contrived in the examples they showcase. [TodoMVC](http://todomvc.com/) is a delightful resource, and taking nothing away from work that's gone into it, it does exactly what it set out to do; giving you a sampling of each framework and library by building one, very simple application. By including the Users and Products resources (you can further check out the [Node.js setup](https://github.com/benhowdle89/isomorphic-js-app/blob/master/api/index.js) I usually employ when dealing with API-side data), I hope I've given you a glimpse at how I'd approach a real application. I can say with confidence that other applications I've built will, and have, scaled well, however, as this was a new and experimental architecture for me, I can't promise the sample application I built takes into account all scenarios and situations.
 
 ### Resources
 
