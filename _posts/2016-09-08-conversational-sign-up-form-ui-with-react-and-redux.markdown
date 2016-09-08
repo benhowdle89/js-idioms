@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Conversational sign-up form UI with React and Redux"
-date:   2015-09-08 16:25:31
+date:   2016-09-08 16:25:31
 ---
 
 With conversational UIs becoming more widely used on the web, I thought it might be interesting to emulate [Ashley Baxter's](https://twitter.com/iamashley) new insurance product's [quoting](https://withjack.co.uk/quote) experience and build it using React and Redux.
